@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- JavaScript -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- Container da aplicação -->
+    <div class="container-app">
+      <!-- Cabeçalho -->
+      <header class="cabecalho">
+        <h1 class="titulo-principal">Lista de Tarefas</h1>
+      </header>
+      <!-- Formulário de adição de tarefas -->
+      <form id="formAddTarefas">
+        <div class="box-input">
+          <input
+            type="text"
+            id="inputTarefa"
+            placeholder="Digite uma tarefa..."
+            required
+          />
+          <span id="msgErroInpTarefa">Teste</span>
+        </div>
+        <div class="box-btn-submit">
+          <button type="submit" class="btn-submit">
+            Adicionar <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+      </form>
+      <!-- Lista de tarefas -->
+      <ul id="listaTarefas"></ul>
+      <!-- Rodapé -->
+      <footer class="rodape">
+        <p class="copyright">
+          Desenvolvido por
+          <a
+            href="https://www.github.com/..."
+            target="_blank"
+            class="link-copyright"
+            >Vitor Souza</a
+          >
+          &copy; 2024
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #415975;
+}
+
+/* Container da aplicação */
+.container-app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #fff;
+  width: 450px;
+  max-width: 90%;
+  padding: 1.2rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  text-align: center;
+}
+
+.titulo-principal {
+  font-size: 1.8rem;
+}
+
+/* Formulário de adição de tarefas */
+#formAddTarefas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.box-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  text-align: center;
+}
+
+#inputTarefa {
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#inputTarefa:focus {
+  outline: 0;
+}
+
+#inputTarefa.erro {
+  border-color: #ff0000;
+}
+
+#inputTarefa.erro::placeholder {
+  color: #ff0000;
+}
+
+#msgErroInpTarefa {
+  display: none;
+  font-size: 0.9rem;
+  color: #ff0000;
+}
+
+#msgErroInpTarefa.ativo {
+  display: block;
+}
+
+.btn-submit {
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background-color: #0077ff;
+  padding: 1rem;
+  border: 1px solid #0077ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.btn-submit:hover {
+  opacity: 1;
+}
+
+/* Lista de tarefas */
+#listaTarefas {
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style-type: none;
+}
+
+#listaTarefas.ativo {
+  display: flex;
+}
+
+.item-lista-tarefas {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-lista-tarefas.concluida {
+  background-color: #9ff7ae;
+}
+
+.item-lista-tarefas.concluida .txt-tarefa {
+  text-decoration: line-through;
+}
+
+.box-selecao-tarefa {
+  flex: 5%;
+}
+
+.bi-circle,
+.bi-check-circle-fill {
+  cursor: pointer;
+}
+
+.txt-tarefa {
+  text-align: justify;
+  flex: 80%;
+}
+
+.box-delecao-tarefa {
+  flex: 5%;
+  text-align: right;
+}
+
+.bi-trash-fill {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+}
+
+.copyright {
+  font-style: italic;
+}
+
+.link-copyright {
+  text-decoration: none;
+  color: #0077ff;
+}
+
+.link-copyright:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+
+/* Tablets (480px p/cima) */
+@media (min-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .item-lista-tarefas {
+    gap: 2.5%;
+  }
+
+  .txt-tarefa {
+    flex: 85%;
+  }
+}
+
+/* Notebooks (768px p/cima) */
+@media (min-width: 768px) {
+  html {
+    font-size: initial;
+  }
+}
